@@ -1,0 +1,27 @@
+<!-- 
+    Review following code snippet and answer questions: 
+1) What’s wrong with this code snippet? 
+Answer : 
+    i) Inside component template, syntax is wrong. div tag is not closed properly.
+    ii) No data type specified for variable _user.
+    iii) while subscribing to authservice, assuming user is a function then
+         syntax should be  like this :  this._authService.user().subscribe(user => { this._user = user; });
+    iv) if user is a observable variable, then syntax should be like : this._authService.user.subscribe(user => { this._user = user; });      
+
+2) How can we improve it? 
+Answer : 
+    i) We must unsubscribe it also inside ngOnDestroy() lifecycle of angular. 
+    ii) we must add proper condition handling while subscribing to service variable/function , in case if no data is there.
+    iii) we must also add error handling syntax in subscribe cycle, to handle error efficiently without breaking the code.
+    iv) we can also use async pipe in case of observable. 
+
+3) What benefits and drawbacks of each method? 
+Answer : 
+  benefits : 
+    i) If used async pipe, then no need to subscribe and unsubcribe manually. it will be by default taken care of by angular .
+    ii) less code and efficient.
+  drawbacks : 
+    i) if you need to handle many conditions and perform manipulations on data coming in subscribe, async pipe maynot be best fit.
+    ii) Need to be very careful while dealing with asynchronous calls in angular.
+
+-->

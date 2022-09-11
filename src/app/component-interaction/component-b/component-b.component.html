@@ -1,0 +1,30 @@
+Component A value in Component B is {{componentAValue}}
+
+
+<!-- 
+
+Given this information, please answer following questions:
+ 1) What options do we have to establish such communication?
+Answer : Multiple options which we have are : 
+   i) @input() decorator : sharing data from parent to child
+   ii) @ViewChild() decorator : sharing data from child to parent
+   iii) creating service and storing value in service variable and accessing it from there only.
+   iv) using Behaviour Subject Observable also we can share data between components.
+   v) @output() event emitter : sharing data from child to parent
+
+ 2) For each option describe what are the pros and cons of this solution?
+ Answer : 
+ Pros : i) No need to apply the change detection manually in angular while using @Input, @ViewChild,@output().
+        ii) Helps in making the component resuable by passing dynamic parameters to components.
+Cons : 
+       i) event emitters might be costly in terms of optimization perspective if used more .
+       ii) might lead to Expression changed dynamic console errors if not used properly.
+       iii) can be used only if there is parent-child relationship between the components. If no relationship, we cannot use it.
+
+ 3) For each option describe what are the cases the solution fits best?
+Answer : i) for parent to child relationship between component, @Input() is the best fit case.
+         ii) for child to parent relationship, @ViewChild & @output() are the best fit case.
+         iii) for generic resuable functions and variables, services are the best fit case
+         iv) to get the latest subscibe value between component, behaviour subject observable is the best fit           
+ -->
+ 
