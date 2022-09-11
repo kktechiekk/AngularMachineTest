@@ -1,7 +1,7 @@
 Please find below the steps to run the application 
 
 Step 1 : Run the below command in your command prompt 
-             git clone https://github.com/kktechiekk/RoonyxMachineTest.git 
+         git clone https://github.com/kktechiekk/RoonyxMachineTest.git 
 Step 2 : cd RoonyxMachineTest
 Step 3 : Run below command 
               npm install 
